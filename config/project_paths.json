@@ -1,0 +1,11 @@
+{
+    "root": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo",
+    "config": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/config",
+    "data": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/data",
+    "knowledge": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/knowledge",
+    "logs": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/logs",
+    "notebook": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/notebook",
+    "src": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/src",
+    "temp": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/temp",
+    "Install": "/Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/src/Install"
+}

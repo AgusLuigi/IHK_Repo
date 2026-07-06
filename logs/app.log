@@ -1,0 +1,14 @@
+2026-07-07 01:20:25,499 - [INFO] - --- Stochastische Projekt-Initialisierung gestartet ---
+2026-07-07 01:20:25,500 - [INFO] - Bestätigtes Hauptverzeichnis (Root): /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo
+2026-07-07 01:20:25,501 - [INFO] - [OK - GESCHÜTZT] Begriff 'root' bereits aktiv --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo
+2026-07-07 01:20:25,501 - [INFO] - [OK - GESCHÜTZT] Begriff 'config' bereits aktiv --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/config
+2026-07-07 01:20:25,502 - [INFO] - [ERSTELLT] Neuer stochastischer Begriff 'data' --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/data
+2026-07-07 01:20:25,503 - [INFO] - [ERSTELLT] Neuer stochastischer Begriff 'knowledge' --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/knowledge
+2026-07-07 01:20:25,504 - [INFO] - [OK - GESCHÜTZT] Begriff 'logs' bereits aktiv --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/logs
+2026-07-07 01:20:25,506 - [INFO] - [OK - GESCHÜTZT] Begriff 'notebook' bereits aktiv --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/notebook
+2026-07-07 01:20:25,513 - [INFO] - [OK - GESCHÜTZT] Begriff 'src' bereits aktiv --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/src
+2026-07-07 01:20:25,516 - [INFO] - [ERSTELLT] Neuer stochastischer Begriff 'temp' --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/temp
+2026-07-07 01:20:25,519 - [INFO] - [OK - GESCHÜTZT] Begriff 'Install' bereits aktiv --> Pfad: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/src/Install
+2026-07-07 01:20:25,520 - [INFO] - Globale Pfad-Begriffe erfolgreich gesichert in: /Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/config/project_paths.json
+2026-07-07 01:20:25,521 - [INFO] - --- Projekt-Initialisierung erfolgreich beendet ---
+
