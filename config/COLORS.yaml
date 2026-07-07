@@ -1,0 +1,99 @@
+# COLORS.yaml - Central Color Definitions for Time Series & Modern Dark Mode
+
+# VISUAL REFERENCE (COMMENTS):
+
+# Global Theme & UI Colors:
+brand:
+  # LEVEL 1: The Dark Base (0-15%)
+  navy_dark:    &brand_navy    "#0B0E14"  # Deep Black-Blue
+  black_rich:   &brand_black   "#111827"  # Pure Dark
+  navy_deep:    &brand_dnavy   "#121D2F"  # Midnight Navy
+  charcoal:     &brand_surface "#161B22"  # Dark Charcoal
+  gunmetal:     &brand_grid    "#1F242C"  # Metallic Dark
+  midnight:     &brand_midnight "#23395B" # Deep Sea Blue
+  deep_space:   &brand_space   "#282E3A"  # Deep Space Gray
+
+  # LEVEL 2: UI & Accents (15-40%)
+  green_forest: &brand_fgreen  "#224F35"  # Dark Forest Green (Adjusted for contrast)
+  emerald_deep: &brand_emerald "#0A5D44"  # Deep Emerald
+  blue_royal:   &brand_royalblue "#1A468C" # Classic Royal Blue
+  red_brand:    &brand_red     "#DA3633"  # Brand Red
+  blue_bright:  &brand_bblue   "#2188FF"  # Vivid Blue
+  orange_deep:  &brand_dorange "#C24E00"  # Dark Orange (Higher Saturation)
+  gold_brand:   &brand_gold    "#D29922"  # Brand Gold
+
+  # LEVEL 3: The Vibrant Mid-Range (40-70%)
+  blue_brand:   &brand_blue    "#58A6FF"  # Light Blue
+  orange_brand: &brand_orange  "#F0883E"  # Sun Orange
+  cyan_sky:     &brand_cyan    "#39C5CF"  # Cyan
+  green_bright: &brand_lgreen  "#56D364"  # Bright Green
+  red_coral:    &brand_coral   "#FA7970"  # Coral
+  salmon:       &brand_salmon  "#F69D50"  # Salmon
+  gray_steel:   &brand_gray    "#8B949E"  # Steel Gray
+  violet:       &brand_violet  "#CEA5FB"  # Violet
+  purple_soft:  &brand_purple  "#BC8CFF"  # Pastel Purple
+
+  # LEVEL 4: Pastel & Highlights (70-100%)
+  lavender:     &brand_lavender "#DCBDFB" # Lavender
+  green_brand:  &brand_green   "#7EE787"  # Brand Green (Pastel)
+  gray_light:   &brand_lgray   "#ABB4BF"  # Light Gray
+  sand_glow:    &brand_sand    "#F8E3A1"  # Warm Sand
+  mint_fresh:   &brand_mint    "#AFF5B4"  # Fresh Mint
+  cloud_white:  &brand_cloud   "#D1D5DA"  # Cloud White
+  white_soft:   &brand_white   "#E6EDF3"  # Soft White
+  white_pure:   &brand_pure    "#FFFFFF"  # Absolute White
+  magenta:      &brand_magenta "#E03E8D"  # Magenta (Vivid)
+
+# Theme & UI
+theme_dark:
+  background:
+    main:      *brand_navy
+    surface:   *brand_surface
+    grid:      *brand_grid
+  text:
+    primary:   *brand_white
+    secondary: *brand_gray
+  ui:
+    border:    *brand_space
+    accent:    *brand_blue
+
+# Time Series Analysis
+analysis:
+  lines:
+    observed:  *brand_blue
+    trend:     *brand_orange
+    forecast:  *brand_green
+    uncertainty: *brand_midnight
+  markers:
+    anomaly:   *brand_red
+    event:     *brand_emerald
+
+# Heatmap
+heatmap:
+    min: *brand_black
+    mid: *brand_bblue
+    max: *brand_gold
+
+# Top 20 Categorical Groups
+visualizations:
+  top20:
+    - *brand_blue      # 1. Primary Blue
+    - *brand_green     # 2. Brand Green (Light)
+    - *brand_orange    # 3. Brand Orange
+    - *brand_red       # 4. Brand Red
+    - *brand_purple    # 5. Purple
+    - *brand_gold      # 6. Gold/Yellow
+    - *brand_cyan      # 7. Turquoise/Cyan
+    - *brand_fgreen    # 8. Forest Green (Dark contrast to 2)
+    - *brand_dorange   # 9. Dark Orange
+    - *brand_royalblue # 10. Royal Blue (Dark contrast to 1)
+    - *brand_coral     # 11. Coral
+    - *brand_salmon    # 12. Salmon
+    - *brand_violet    # 13. Violet
+    - *brand_emerald   # 14. Emerald Green
+    - *brand_lavender  # 15. Lavender
+    - *brand_mint      # 16. Mint (Very light)
+    - *brand_sand      # 17. Sand/Beige
+    - *brand_bblue     # 18. Bright Vivid Blue
+    - *brand_gray      # 19. Steel Gray (Neutral)
+    - *brand_magenta   # 20. Magenta (Vivid)
