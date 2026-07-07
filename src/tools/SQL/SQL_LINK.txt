@@ -1,0 +1,1 @@
+sqlite:////Users/cristallagus/Desktop/IHK_Prüfung/IHK_Repo/data/replizierte_daten.sqlite

@@ -1,6 +1,6 @@
 import plotly.io as pio
 
-from Favorita_TSA.viz.color_manager import ColorManager
+from color.color_manager import ColorManager
 
 
 def set_plotly_theme() -> None:

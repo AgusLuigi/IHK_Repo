@@ -65,7 +65,7 @@ def analyze_semantic_type_v3(df_check: pd.DataFrame) -> pd.DataFrame:
             'validation_func': lambda series: (series.dropna().nunique() >= 1) and (pd.api.types.is_bool_dtype(series.dropna()) or set(series.dropna().astype(str).str.lower().str.strip().unique()).issubset({'true', 'false', '1', '0', 'ja', 'nein', 'yes', 'no', 't', 'f', 'wahr', 'falsch'}))
         },
         'Boolean': {
-            'keywords': {'self_employed','is_weekend_trip', 'boolean', 'bool', 'booked', 'married', 'cancellation', 'children','discount', 'flight_booked', 'hotel_booked', 'return_flight_booked', 'is_cancelled'},
+            'keywords': {'wartung_aktiv','self_employed','is_weekend_trip', 'boolean', 'bool', 'booked', 'married', 'cancellation', 'children','discount', 'flight_booked', 'hotel_booked', 'return_flight_booked', 'is_cancelled'},
             'validation_func': lambda series: (series.dropna().nunique() == 2) and (pd.api.types.is_bool_dtype(series.dropna()) or set(series.dropna().astype(str).str.lower().str.strip().unique()).issubset({'true', 'false', '1', '0', 'ja', 'nein', 'yes', 'no', 't', 'f', 'wahr', 'falsch'}))
         },
         'Float (Geografisch)': {
