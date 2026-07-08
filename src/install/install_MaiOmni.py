@@ -68,9 +68,19 @@ class BaseInstaller:
         return self.run_command(command)
 
     def install_dependencies(self):
-        """Installiert die Basis-Bibliotheken in die neue Umgebung."""
+        """Installiert die Basis-Bibliotheken und stellt sicher, dass die Umgebung existiert."""
+        self.log(f"Überprüfe Umgebung '{self.target_env_name}'...")
+        
+        # Chirurgischer Fix: Wenn die Umgebung nicht existiert, erstelle sie hier sofort,
+        # anstatt den Fehler bei 'conda run' auflaufen zu lassen.
+        if not self.check_env_exists():
+            self.log("Umgebung nicht gefunden. Erstelle Umgebung jetzt...")
+            if not self.create_conda_env():
+                self.log("[FEHLER] Umgebung konnte nicht erstellt werden. Abbruch.")
+                return False
+
         self.log(f"Installiere/Überprüfe Basis-Pakete in '{self.target_env_name}'...")
-        # Hier nutzen wir 'conda run -n', damit wir nicht mühsam die Shell wechseln müssen
+        # Jetzt kann 'conda run' sicher ausgeführt werden, da die Umgebung existiert
         command = f"conda run -n {self.target_env_name} pip install jupyter ipykernel"
         return self.run_command(command)
 
