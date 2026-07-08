@@ -1,0 +1,13 @@
+pandas
+numpy
+langdetect
+pyperclip
+geoalchemy2
+sqlalchemy
+psycopg2-binary
+graphviz
+ipython
+plotly
+pyyaml
+jupyter
+ipykernel
