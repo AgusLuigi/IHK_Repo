@@ -68,21 +68,28 @@ class BaseInstaller:
         return self.run_command(command)
 
     def install_dependencies(self):
-        """Installiert die Basis-Bibliotheken und stellt sicher, dass die Umgebung existiert."""
-        self.log(f"Überprüfe Umgebung '{self.target_env_name}'...")
+        """Installiert Basis-Pakete und repariert fehlende pip-Instanzen."""
+        self.log(f"Überprüfe Abhängigkeiten in '{self.target_env_name}'...")
         
-        # Chirurgischer Fix: Wenn die Umgebung nicht existiert, erstelle sie hier sofort,
-        # anstatt den Fehler bei 'conda run' auflaufen zu lassen.
+        # 1. Sicherstellen, dass die Umgebung existiert
         if not self.check_env_exists():
-            self.log("Umgebung nicht gefunden. Erstelle Umgebung jetzt...")
-            if not self.create_conda_env():
-                self.log("[FEHLER] Umgebung konnte nicht erstellt werden. Abbruch.")
-                return False
+            self.create_conda_env()
 
-        self.log(f"Installiere/Überprüfe Basis-Pakete in '{self.target_env_name}'...")
-        # Jetzt kann 'conda run' sicher ausgeführt werden, da die Umgebung existiert
-        command = f"conda run -n {self.target_env_name} pip install jupyter ipykernel"
-        return self.run_command(command)
+        # 2. Reparatur-Logik: Erzwinge die Installation von pip in der Umgebung
+        # Dies behebt den 'ImportError: No module named pip'
+        self.log("Stelle sicher, dass pip verfügbar ist...")
+        self.run_command(f"conda install -n {self.target_env_name} pip -y")
+
+        # 3. Installation der Pakete
+        self.log("Installiere Jupyter und ipykernel...")
+        success = self.run_command(f"conda run -n {self.target_env_name} pip install jupyter ipykernel")
+        
+        if success:
+            self.log("Abhängigkeiten erfolgreich installiert.")
+        else:
+            self.log("[FEHLER] Installation der Pakete fehlgeschlagen.")
+        
+        return success
 
     def run(self):
         """Haupt-Workflow der Installation."""
